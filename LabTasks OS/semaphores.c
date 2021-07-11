@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//setting initial values
 int mutex = 1, full = 0, empty = 3, x = 0;
 
 int main()
@@ -37,15 +38,18 @@ int main()
     return 0;
 }
 
+//wait function here
 int wait(int s)
 {
     return (--s);
 }
+//signal function here
 int signal(int s)
 {
     return (++s);
 }
 
+//producer function here
 void producer()
 {
     mutex = wait(mutex);
@@ -56,6 +60,7 @@ void producer()
     mutex = signal(mutex);
 }
 
+//consumer function here
 void consumer()
 {
     mutex = wait(mutex);
