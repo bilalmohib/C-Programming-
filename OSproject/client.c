@@ -103,7 +103,7 @@ int main(int argc, char **argv)
 
     signal(SIGINT, catch_ctrl_c_and_exit);
 
-    printf("Please enter your name: ");
+    printf("Hi I hope you will be in the best of your health.Lets Start\n.Please enter your name: ");
     fgets(name, 32, stdin);
     str_trim_lf(name, strlen(name));
 
@@ -152,7 +152,7 @@ int main(int argc, char **argv)
     {
         if (flag)
         {
-            printf("\nBye\n");
+            printf("\nAllah Hafiz\n");
             break;
         }
     }
